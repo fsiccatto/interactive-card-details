@@ -13,9 +13,11 @@
 <body>
   <section class="card">
     <div class="front-card">
-      <div class="card-logo"></div>
+      <div class="card-logo">
+        <img src="images/card-logo.svg" alt="">
+      </div>
       <div class="card-info">
-        <h2>0000 0000 0000 0000</h2>
+        <h1>0000 0000 0000 0000</h1>
         <h3>Jane Appleseed</h3>
         <h3>00/00</h3>
       </div>
@@ -32,14 +34,19 @@
       <input type="text" placeholder="e.g. Jane Appleseed" name="name-card" id="name-card" required>
       <label for="number-card">Card Number</label>
       <input type="number" placeholder="e.g. 1234 5678 9123 0000" name="number-card" id="number-card" required>
-      <label for="date-card">Exp. Date (MM/YY)</label>
-      <div class="date-card">
-        <input type="number" placeholder="MM" name="month-card" id="month-card" required>
-        <input type="number" placeholder="YY" name="year-card" id="year-card" min="1" max="" required>
+
+      <div class="info">
+        <div class="expirated-card">
+          <label for="month-card">Exp. Date (MM/YY)</label>
+          <input type="number" placeholder="MM" name="month-card" id="month-card" required>
+          <input type="number" placeholder="YY" name="year-card" id="year-card" min="1" max="" required>
+        </div>
+        <div class="security-card">
+          <label for="cvc">CVC</label>
+          <input type="number" placeholder="e.g. 123" name="cvc" id="cvc" required>
+        </div>
       </div>
-      <label for="cvc">CVC</label>
-      <input type="number" name="cvc" id="cvc" required>
-      <input type="submit" value="Confirm">
+      <button type="submit">Confirm</button>
     </form>
   </section>
 
@@ -50,10 +57,5 @@
     <h5>We've added your card details</h5>
     <button type="button">Continue</button>
   </section>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
