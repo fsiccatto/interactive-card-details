@@ -36,9 +36,6 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 /* Eliminamos los botones de los input number */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -128,3 +125,86 @@ body {
 .state-form {
   display: none;
 }
+
+
+/* FORM */
+
+.card-form {
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  align-self: center;
+  padding: 5rem;
+}
+
+.card-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.card-form form label {
+  font-size: 12px;
+  margin-bottom: 3px;
+  color: var(--vd-grayish-violet);
+}
+
+.card-form form input {
+  padding: .5rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--l-grayish-violet);
+  outline: none;
+}
+
+.card-form form input::placeholder {
+  font-family: var(--font-ppal);
+  letter-spacing: 1px;
+  color: var(--d-grayish-violet);
+}
+
+.card-form form input:focus {
+  border: 1px solid transparent;
+  outline: 1px solid #600594;
+}
+
+.card-form form button {
+  padding: .7rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--vd-grayish-violet);
+  transition: background, transform .2s ease;
+}
+
+.card-form form button:hover {
+  transform: scale(1.05);
+  background-color: var(--d-grayish-violet);
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expirated-card {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.expirated-card input {
+  width: 45%;
+  margin-right: .2rem;
+}
+
+.security-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+
