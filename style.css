@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 :root {
-  --gradient: #6448fe to #600594;
+  --gradient: linear-gradient(to bottom right, #6448fe 0%, #600594 100%);;;
   --error-inputs: #ff5252;
   --white: #fff;
   --l-grayish-violet: #dedddf;
@@ -31,5 +31,100 @@ body{
   background-color: var(--vl-grayish-blue);
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* Eliminamos los botones de los input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] { -moz-appearance:textfield; }
+
+/* CARD */
+body {
+  display: flex;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  background: url(images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.card .front-card,
+.card .back-card {
+  position: relative;
+  top: 0;
+  left: 30%;
+  background: url(images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  width: 400px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+}
+
+.card .back-card {
+  position: relative;
+  left: 45%;
+  background: url(images/bg-card-back.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-items: flex-end;
+}
+
+.back-card h5 {
+  padding: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  align-self: flex-end;
+}
+
+.card-logo {
+  height: 50%;
+}
+
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-info h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  width: 100%;
+}
+.card-info h3{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin: 1rem 0 0;
+}
+
+.state-form {
+  display: none;
+}
