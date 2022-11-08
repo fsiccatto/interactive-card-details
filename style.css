@@ -274,8 +274,12 @@ span {
 
   .card .front-card,
   .card .back-card {
-    left: 0;
+    left: -50px;
     margin-bottom: 1rem;
+  }
+
+  .card .back-card {
+    left: 50px;
   }
 
   section .card-form {
@@ -283,9 +287,13 @@ span {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   section .card-form {
     padding: 2rem;
   }
 
+  .card .front-card,
+  .card .back-card {
+    left: 0;
+  }
 }
