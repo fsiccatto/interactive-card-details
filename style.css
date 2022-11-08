@@ -254,3 +254,38 @@ span {
 .card-form form input.error {
   border: 1px solid var(--error-inputs);
 }
+
+/* QUERYS */
+@media screen and (max-width: 1100px) {
+  body {
+    display: block;
+  }
+
+  .card-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+  }
+
+  .card .front-card,
+  .card .back-card {
+    left: 0;
+    margin-bottom: 1rem;
+  }
+
+  section .card-form {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section .card-form {
+    padding: 2rem;
+  }
+
+}
