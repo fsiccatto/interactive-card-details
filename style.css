@@ -52,6 +52,7 @@ body {
 
 .card-container {
   display: flex;
+  width: 100%;
   height: 100vh;
   background-color: var(--white);
 }
@@ -124,6 +125,10 @@ body {
   margin: 1rem 0 0;
 }
 
+.card-info .date-card-front {
+  display: flex;
+}
+
 /* FORM */
 .card-form,
 .state-form {
@@ -150,9 +155,9 @@ body {
 
 .card-form form input {
   padding: .5rem 1rem;
-  margin-bottom: 1.5rem;
   border-radius: 5px;
   font-family: var(--font-ppal);
+  font-size: 18px;
   border: 1px solid var(--l-grayish-violet);
   outline: none;
   color: var(--vd-grayish-violet);
@@ -196,6 +201,7 @@ body {
 .expirated-card {
   display: flex;
   width: 50%;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -212,15 +218,14 @@ body {
 }
 
 /* STATE */
-.card-form.completed {display: none;}
+.card-form.hidden {display: none;}
 
-.state-form.completed{
+.state-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
-}
+} 
 
 .state-form h1 {
   text-transform: uppercase;
@@ -234,4 +239,18 @@ body {
   color: var(--d-grayish-violet);
 }
 
-.state-form {display: none;}
+.state-form.hidden {display: none;}
+
+
+/* ERROR */
+span {
+  position: relative;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  font-size: 10px;
+  color: var(--error-inputs);
+}
+
+.card-form form input.error {
+  border: 1px solid var(--error-inputs);
+}
