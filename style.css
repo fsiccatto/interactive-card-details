@@ -34,6 +34,7 @@ body{
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+  font-weight: 500;
 }
 
 /* Eliminamos los botones de los input number */
@@ -46,6 +47,10 @@ input[type=number] { -moz-appearance:textfield; }
 
 /* CARD */
 body {
+  display: flex;
+}
+
+.card-container {
   display: flex;
   height: 100vh;
   background-color: var(--white);
@@ -92,7 +97,6 @@ body {
 
 .back-card h5 {
   padding: 1rem;
-  font-weight: 500;
   letter-spacing: 2px;
   align-self: flex-end;
 }
@@ -109,27 +113,20 @@ body {
 }
 .card-info h1 {
   text-align: center;
-  font-weight: 500;
   font-size: 1.4rem;
   letter-spacing: 2px;
   width: 100%;
 }
 .card-info h3{
   text-transform: uppercase;
-  font-weight: 500;
   font-size: 15px;
   letter-spacing: 2px;
   margin: 1rem 0 0;
 }
 
-.state-form {
-  display: none;
-}
-
-
 /* FORM */
-
-.card-form {
+.card-form,
+.state-form {
   width: 500px;
   margin-right: auto;
   margin-left: auto;
@@ -147,6 +144,7 @@ body {
 .card-form form label {
   font-size: 12px;
   margin-bottom: 3px;
+  cursor: pointer;
   color: var(--vd-grayish-violet);
 }
 
@@ -154,8 +152,10 @@ body {
   padding: .5rem 1rem;
   margin-bottom: 1.5rem;
   border-radius: 5px;
+  font-family: var(--font-ppal);
   border: 1px solid var(--l-grayish-violet);
   outline: none;
+  color: var(--vd-grayish-violet);
 }
 
 .card-form form input::placeholder {
@@ -169,7 +169,9 @@ body {
   outline: 1px solid #600594;
 }
 
-.card-form form button {
+.card-form form button,
+.state-form button {
+  width: 100%;
   padding: .7rem;
   border-radius: 5px;
   border: none;
@@ -179,7 +181,8 @@ body {
   transition: background, transform .2s ease;
 }
 
-.card-form form button:hover {
+.card-form form button:hover,
+.state-form button:hover {
   transform: scale(1.05);
   background-color: var(--d-grayish-violet);
 }
@@ -208,3 +211,27 @@ body {
   width: 50%;
 }
 
+/* STATE */
+.card-form.completed {display: none;}
+
+.state-form.completed{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.state-form h1 {
+  text-transform: uppercase;
+  margin: 2rem 0 1rem;
+  letter-spacing: 3px;
+  color: #600594;
+}
+
+.state-form h5 {
+  margin-bottom: 2rem;
+  color: var(--d-grayish-violet);
+}
+
+.state-form {display: none;}
